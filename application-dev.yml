@@ -1,0 +1,21 @@
+#服务名
+spring:
+  application:
+    name: provider
+    #连接池
+  datasource:
+    url: jdbc:mysql://172.16.8.100:3306/tvmall?useUnicode=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+server:
+  port: 9005
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.16.8.119:9010/eureka
+
+mybatis:
+  type-aliases-package: cn.yunhe.java.pojo
+info:
+  application-name: 服务提供者
